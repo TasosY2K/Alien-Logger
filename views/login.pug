@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Alien Logger | Free Online Keylogger Service | Login</title>
+		include seo.pug
+		include head.pug
+	</head>
+	<body>
+		script
+			include js/form_validation.js
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<div class="container center">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="jumbotron">
+						<form action="login" method="POST">
+							<h1>Login</h1>
+							<div class="form-group">
+								<input id="login-page-username" class="form-control" type="text" name="username" placeholder="Username or Email" oninput="checkEmpty();" required>
+							</div>
+							<div class="form-group">
+								<input id="login-page-password" class="form-control" type="password" name="password" placeholder="Password" oninput="checkEmpty();" required>
+							</div>
+							<button id="login-page-submit" type="submit" class="btn btn-outline-light btn-block" disabled>Submit</button>
+							div(class="g-recaptcha mt-3" data-sitekey=sitekey)
+						</form>
+						<a href="/register">Don't have an account? register here</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Account</title>
+    include head.pug
+    include miner.pug
+  </head>
+  <body>
+    script
+      include js/form_validation.js
+    include navbar.pug
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h1>Account Settings</h1>
+          <form action="account" method="POST">
+            <small id="username-validation-text" class="form-text text-danger"></small>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              input(type='text' name='username' id='username-validation' class='form-control' value=username placeholder='Username' oninput='checkUsername();' required)
+            </div>
+            <small id="email-validation-text" class="form-text text-danger"></small>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-at"></i></span>
+              </div>
+              input(type='email' name='emailaddress' id='email-validation' class='form-control' value=email placeholder='Email' oninput='checkEmail();' required)
+            </div>
+            <small id="password-validation-text" class="form-text text-danger"></small>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              input(type='password' name='newPassword' id='password-validation' class='form-control' value=password placeholder='New Password' oninput='checkPassword();' required)
+            </div>
+            <div class="input-group">
+              <input type="password" name="oldPassword" class="form-control" placeholder="Old Password" required>
+              <span class="input-group-append">
+                <button class="account-submit btn btn-outline-success" type="submit">Save Changes <i class="fas fa-save"></i></button>
+              </span>
+            </div>
+          </form>
+          <div class="alert alert-danger" role="alert">
+            <i class="fas fa-exclamation-triangle"></i> You wil be automatically logged out after saving changes.
+          </div>
+          <button type="button" class="btn btn-outline-danger btn-block" data-toggle="modal" data-target="#deletePrompt">Delete Account <i class="fas fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="deletePrompt">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Are you sure?</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>By deleting your account all your personal data stored in this website will be completely removed with no way to get it back.<br>This includes all of your logs.</p>
+          </div>
+          <div class="modal-footer">
+            <form action="delete" method="POST" class="w-100">
+              <div class="input-group">
+                <input type="password" name="password" class="form-control text-dark" placeholder="Verify Password" required>
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-success">Continue</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    include footer.pug
+  </body>
+</html>

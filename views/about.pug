@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>About</title>
+    include head.pug
+    include miner.pug
+  </head>
+  <body>
+    script
+      include js/log_tools.js
+    include navbar.pug
+    <div class="container">
+      <h1>About us</h1>
+      <p>Alien Logger is a free online service that allows anyone regardless of their technical knowledge to create and deploy their own keylogger.<br>
+         You You can view and download your logs online on your dashboard.</p>
+      <h3>Privacy</h3>
+      <p>To protect our users we strongly encrypt all user data using bcrypt.<br>
+         We We also disallow all bots from scanning content from this website.</p>
+      <h3>Crypto Mining</h3>
+      <p>To keep providing our service for free we need to cover our hosting fees.<br>
+         To To get the revenue needed we use in-browser crypto mining.<br><br>
+         We We also accept donations in:<br><a href="#" class="text-white" data-toggle="modal" data-target="#btcPrompt">XMR <i class="fab fa-monero"></i></a><br><a class="text-white" target="_blank" href="https://paypal.me/lean730?locale.x=en_US">Paypal <i class="fab fa-paypal"></i></a></p>
+      <h3>Terms and Conditions</h3>
+      <p>By creating an account and using our site you agree to our Terms and Conditions.</p>
+      //- Add your Terms page 
+      <a target="_blank" href="">View our full Terms and Conditions</a>
+    </div>
+    <div class="modal fade" id="btcPrompt">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">XMR address</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <input type="text" id="xmrAddress" class="form-control text-dark" value="46mCWqGC49Bj9sLs379X8vhvgQykyGqWxEergbhyBR3dPgaSc9pvFBQYKuL1Qx8je7CEdxXwYAdDEhfsRit3zvvSJXye1GH" readonly>
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary" onclick="copyElement('xmrAddress')">Copy <i class="fas fa-copy"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    include footer.pug
+  </body>
+</html>

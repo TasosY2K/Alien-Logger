@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Logs</title>
+    include head.pug
+  </head>
+  <body>
+    script
+      include js/log_tools.js
+    include navbar.pug
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-md">
+          <h1>Your logs</h1>
+          p= last_client_login
+          p= last_client_ip
+          textarea(rows='15' id='log-area' readonly)= logs
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4 mt-1">
+          <form style="margin:0" action="logs" method="POST">
+            <button class="btn btn-outline-light btn-block">Reload <i class="fas fa-sync-alt"></i></button>
+          </form>
+        </div>
+        <div class="col-md-4 mt-1">
+          <button class="btn btn-outline-light btn-block" onclick="copyElement('log-area')">Copy <i class="fas fa-copy"></i></button>
+        </div>
+        <div class="col-md-4 mt-1">
+          <button class="btn btn-outline-light btn-block" onclick="downloadLogs()">Download <i class="fas fa-file-download"></i></button>
+        </div>
+      </div>
+    </div>
+    include footer.pug
+  </body>
+</html>

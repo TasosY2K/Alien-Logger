@@ -1,0 +1,22 @@
+{
+  "author" : "leandev",
+  "version" : "1.0",
+  "url" : "http://localhost",
+  "port" : "80",
+  "securePort" : "443",
+  "kill" : "False",
+  "database" : {
+    "host" : "",
+    "user" : "",
+    "password" : "",
+    "database" : ""
+  },
+  "blacklist" : [
+    "142.93.160.36"
+  ],
+  "recaptcha" : {
+    "site_key" : "",
+    "secret_key" : ""
+  },
+  "discordInvite": ""
+}

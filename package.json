@@ -1,0 +1,35 @@
+{
+  "name": "alien-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "cli-table3": "^0.5.1",
+    "cloudflare-express": "^1.0.1",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-recaptcha": "^5.0.1",
+    "express-session": "^1.17.1",
+    "figlet": "^1.5.0",
+    "ipfilter": "0.0.4",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "mysqldump": "^3.2.0",
+    "node-cron": "^2.0.3",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "request": "^2.88.2",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Coda&display=swap');
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html.touch *:hover {
+    pointer-events: none !important;
+}
+
+body {
+  margin-bottom: 80px;
+  font-family: 'Coda';
+  background-color: #2b0f14;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%232b0f14' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%232a1018' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2329101b' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%2327111e' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23241321' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23221423' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%231f1525' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%231c1626' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23191827' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23151927' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23121a27' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23101a27' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%230e1b26' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%230d1c25' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%230c1c23' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%230c1d22' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%230d1d20' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%230e1d1f' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+::selection {
+  background-color: #28a745;
+}
+
+input {
+  background-color: transparent !important;
+}
+
+input[type]:not([type=search]):not([type=url]):not([type=hidden]) {
+ color: #ffffff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  color: #ffffff;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+.tutorial-img {
+  border: 2px solid #ffffff;
+  border-radius: 0.25rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #000000;
+}
+
+.jumbotron {
+  border: 2px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron a {
+  color: #ffffff;
+}
+
+.navbar {
+  background-color: #000000;
+}
+
+.input-group-text {
+  color: #ffffff;
+  background-color: transparent !important;
+}
+
+@media screen and (max-width: 995px) {
+  .disabled {
+    display: none;
+  }
+}
+
+textarea {
+  border-color: #ffffff;
+  width: 100%;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+textarea:focus {
+  border-color: #ffffff;
+  outline: none !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+@media (hover: hover) {
+    btn:hover { color: blue; }
+}

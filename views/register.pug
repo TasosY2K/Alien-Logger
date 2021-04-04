@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Alien Logger | Free Online Keylogger Service | Register</title>
+		include seo.pug
+		include head.pug
+	</head>
+	<body>
+		script
+			include js/form_validation.js
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<div class="container center">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="jumbotron">
+						<form action="register" method="POST">
+							<h1>Register</h1>
+							<div class="form-group">
+								<input id="username-validation" class="form-control" type="text" name="username" placeholder="Username" oninput="checkAll(); checkUsername();" required>
+								<small id="username-validation-text" class="form-text text-danger"></small>
+							</div>
+							<div class="form-group">
+								<input id="email-validation" class="form-control" type="email" name="emailaddress" placeholder="Email" oninput="checkAll(); checkEmail();" required>
+								<small id="email-validation-text" class="form-text text-danger"></small>
+							</div>
+							<div class="form-group">
+								<input id="password-validation" class="form-control" type="password" name="password" placeholder="Password" oninput="checkAll(); checkPassword();" required>
+								<small id="password-validation-text" class="form-text text-danger"></small>
+							</div>
+							<div class="form-group">
+								<input id="password-confirm" class="form-control" type="password" name="confirm" placeholder="Confirm Password" oninput="checkAll(); checkConfirm();" required>
+								<small id="password-confirm-text" class="form-text text-danger"></small>
+							</div>
+							<button type="submit" class="register-submit btn btn-outline-light btn-block" disabled>Submit</button>
+							div(class="g-recaptcha mt-3" data-sitekey=sitekey)
+						</form>
+						<div class="alert alert-danger" role="alert">
+							By By creating your account and using this website and any software associated with it you comply to our <a class="text-primary" href="https://www.termsandconditionsgenerator.com/live.php?token=QERzcMCqejLNVYu4CPrbgA5OIoYQlFt4">Terms and Conditions</a>
+						</div>
+						<a href="/login">Already have an account? login here</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

