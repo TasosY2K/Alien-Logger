@@ -68,3 +68,5 @@ You can transfer the **.exe** with a usb drive allongside a **.txt** containing 
 
 View all the logs collected from that machine by clicking **Show Logs**.
 ![image](https://user-images.githubusercontent.com/29873078/113494787-5b528d80-94f4-11eb-90af-5170fa9b8ff2.png)
+
+**I will not be responsible for any direct or indirect damage caused due to the usage of this tool, it is for educational purposes only.**
