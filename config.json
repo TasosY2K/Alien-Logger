@@ -2,9 +2,10 @@
   "author" : "leandev",
   "version" : "1.0",
   "url" : "http://localhost",
-  "port" : "80",
+  "port" : "1920",
   "securePort" : "443",
-  "kill" : "False",
+  "https": false,
+  "kill" : false,
   "database" : {
     "host" : "",
     "user" : "",
